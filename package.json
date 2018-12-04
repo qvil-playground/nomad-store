@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server.js",
+    "build": "server.js build",
+    "start": "NODE_ENV=production node server.js start"
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,9 @@
   },
   "homepage": "https://github.com/qvil-playground/nomad-store#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
   }
 }
