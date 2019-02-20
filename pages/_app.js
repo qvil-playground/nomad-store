@@ -5,8 +5,10 @@ class MyApp extends App {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register("/sw.js")
-        .then(res => console.log(`Result : ${res}`))
-        .catch(err => console.error(`Error : ${err}`));
+        .then(res => console.log(`Service Worker Registered Result`, res))
+        .catch(err =>
+          console.error(`[Service Worker not registered] Error : `, err)
+        );
     }
   }
   render() {
